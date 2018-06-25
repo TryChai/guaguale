@@ -1,0 +1,390 @@
+*{  font-family: "Microsoft YaHei","微软雅黑", Helvetica, Arial, sans-serif;}
+    html,body{
+        max-width: 640px;
+        margin:0 auto;
+        padding: 0;
+        background: #f28b91;
+    }
+    body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form, 
+    fieldset,input,textarea,p,blockquote,th,td { 
+    margin:0; 
+    padding:0; 
+    } 
+    table { 
+    border-collapse:collapse; 
+    border-spacing:0; 
+    } 
+    fieldset,img { 
+    border:0; 
+    } 
+    address,caption,cite,code,dfn,em,strong,th,var { 
+    font-style:normal; 
+    font-weight:normal; 
+    } 
+    ol,ul { 
+    list-style:none; 
+    } 
+    caption,th { 
+    text-align:left; 
+    } 
+    h1,h2,h3,h4,h5,h6 { 
+    font-size:100%; 
+    font-weight:normal; 
+    } 
+    q:before,q:after { 
+    content:''; 
+    } 
+    abbr,acronym { border:0; 
+    } 
+     img{
+        width: 100%;
+        display: block;
+     }
+     .relative{position: relative;}
+     .show_info {
+        width: 63%;
+        position: absolute;
+        overflow: hidden;
+        font-size: .2rem!important;
+        padding-bottom: .5rem!important;
+        top: -28%;
+        left: 30%;
+        color: #fff;
+    }
+    .show_info ul {
+        height: .6rem;
+        margin-top: 5%;
+    }
+     .show_info ul span {
+        margin-right: 20px;
+        line-height: .6rem;
+    }
+    #prise{
+        background: #f28b91;
+        position: relative;
+        width: 100%;
+        height: 4.1rem;
+    }
+    #main {
+        position: absolute;
+        top: 10%;
+        left: 0%;
+        right: 0%;
+        width: auto;
+        margin: auto;
+        background-color: transparent;
+    }
+    .canvasBox {
+        width: 78%;
+        height: 4.04rem;
+        border-radius: 10px;
+        background: url(../images/prise_bg.png) no-repeat center/100%;
+        margin-left: 11%;
+        text-align: center;
+        position: relative;
+        padding-top: -7%;
+    }
+     .prise_state{
+        width: 96%;
+        height: 2.8rem;
+        position: absolute;
+        top: 13%;
+        left: 2%;
+        z-index: 7;
+        background-color: transparent;
+    }
+    .prise_state p {
+        width: 90%;
+        font-size: .3rem;
+        color: #fe3942;
+        width: 90%;
+        margin: auto;
+        padding: 2% 0;
+        text-align: center;
+        height: .5rem;
+        border-radius: .3rem;
+        margin-top: 11%;
+        background: #e5e5e5;
+    }
+    .prise_state .gua_btn {
+        font-size: .36rem;
+        width: 44%;
+        margin: auto;
+        background: #fe3942;
+        font-weight: 500;
+        padding: 3%;
+        border-radius: .3rem;
+        margin-top: 10%;
+        letter-spacing: .03rem;
+        text-align: center;
+        color: #fefefe;
+        font-family: '黑体';
+    }
+    .prise_state .ungua_btn {
+        display: none;
+        font-size: .36rem;
+        width: 44%;
+        margin: auto;
+        background: #ccc;
+        font-weight: 500;
+        padding: 3%;
+        border-radius: .3rem;
+        margin-top: 10%;
+        letter-spacing: .03rem;
+        text-align: center;
+        color: #fefefe;
+        font-family: '黑体';
+    }
+    #canvas {
+        width: 96%;
+        height: 2.8rem;
+        position: absolute;
+        top: 13%;
+        left: 2%;
+        z-index: 5;
+        background-color: transparent;
+    }
+    @media screen and (min-width:640px){
+        #canvas {
+            width: 96%;
+            height: 2.8rem;
+            position: absolute;
+            top: 13%;
+            left: 1.6%;
+            z-index: 5;
+            background-color: transparent;
+        }
+    }
+     .prize {
+        width: 96%;
+        /*border: 1px solid red;*/
+        font-size: .3rem;
+        margin: auto;
+        position: absolute;
+        top: 13%;
+        left: 1%;
+        z-index: 3;
+        font-family: '黑体';
+        font-size: .36rem;
+        color: #fe3942;
+        line-height: 2.8rem;
+        height: 2.8rem;
+    }
+   
+  .tan{
+    display: block;
+    position: fixed;
+    top: 0%;
+    left: 50%;
+    width: 100%;
+    max-width: 640px;
+    height: 100%;
+    z-index: 99;
+    transform: translate3d(-50%,0,0);
+    transform: -webkit-translate3d(-50%,0,0);
+    background: rgba(0,0,0,0.6);
+  }
+  .tan_box {
+    position: absolute;
+    top: 24%;
+    width: 64%;
+    height: 2.8rem;
+    background: #fff;
+    left: 0%;
+    right: 0%;
+    margin: auto;
+    border-radius: .3rem;
+    font-size: .4rem;
+  }
+  .tan_close {
+    position: absolute;
+    cursor: pointer;
+    top: 7%;
+    right: 5%;
+    width: 7%;
+  }
+  .tan_note {
+    font-size: .26rem;
+    width: 100%;
+    text-align: center;
+    margin-top: 0.7rem;
+    /*line-height: .6rem;*/
+  }
+  .tan_btn {
+    width: 53%;
+    margin: auto;
+    background: #0ed0c5;
+    color: #fff;
+    font-size: .3rem;
+    text-align: center;
+    padding: 4% 0%;
+    margin-top: 11%;
+    border-radius: .2rem;
+    letter-spacing: .03rem;
+  }
+.rule {
+    position: absolute;
+    top: 16%;
+    width: 88%;
+    height: auto;
+    background: #fff;
+    left: 0%;
+    right: 0%;
+    margin: auto;
+    border-radius: .15rem;
+    font-size: .4rem;
+    padding-bottom: 4%;
+    padding-top: 3%;
+}
+  .rule_title {
+    color: #0ed0c5;
+    font-size: .36rem;
+    text-align: center;
+    margin: 3% 0;
+}
+  .rule ul {
+    margin: 0;
+    padding: 0 3%;
+}
+ .rule ul li {
+    font-size: .24rem;
+    color: #7d7d7d;
+    list-style: none;
+    line-height: .4rem;
+    margin-bottom: 4%;
+}
+.rule_close {
+    position: absolute;
+    top: 3%;
+    right: 5%;
+    cursor: pointer;
+    width: 6%;
+}
+.rule_btn {
+    position: absolute;
+    top: 0%;
+    left: 39%;
+    width: 1.5rem;
+    height: .5rem;
+    cursor: pointer;
+    background: transparent;
+}
+.zhong {
+    position: absolute;
+    top: 16%;
+    width: 84%;
+    height: auto;
+    background: #fff;
+    left: 0%;
+    right: 0%;
+    margin: auto;
+    border-radius: .15rem;
+    font-size: .4rem;
+    padding-bottom: 4%;
+    padding-top: 3%;
+}
+.zhong ul {
+    width: 74%;
+    border: 1px solid #7d7d7d;
+    border-radius: .15rem;
+    background: #eeeeee;
+    margin: 0 auto;
+    height: auto;
+    padding: 3% 5%;
+    padding-bottom: 19%;
+}
+.zhong ul li {
+    list-style: none;
+    font-size: .24rem;
+    color: #434343;
+    margin-bottom: 5%;
+    line-height: .38rem;
+}
+.zhong ul li p{
+    font-size: .2rem;
+    color: #7d7d7d;
+}
+.zhong_btn {
+    width: 53%;
+    margin: auto;
+    background: #0ed0c5;
+    color: #fff;
+    font-size: .3rem;
+    text-align: center;
+    padding: 3% 0%;
+    margin-top: 8%;
+    border-radius: .2rem;
+    letter-spacing: .03rem;
+}
+.form {
+    position: absolute;
+    top: 16%;
+    width: 88%;
+    height: auto;
+    background: #fff;
+    left: 0%;
+    right: 0%;
+    margin: auto;
+    border-radius: .15rem;
+    font-size: .4rem;
+    padding-bottom: 4%;
+    padding-top: 3%;
+}
+.form_note {
+    font-size: .24rem;
+    color: #434343;
+    line-height: .4rem;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 3%;
+}
+.input_group {
+    width: 81%;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-bottom: 4%;
+}
+.input_group label {
+    float: left;
+    width: 14%;
+    font-size: .24rem;
+    color: #434343;
+}
+.label{
+    margin-top: 3%;
+}
+.input_group input {
+    float: left;
+    width: 82%;
+    text-indent: .25rem;
+    border: 1px solid #7d7d7d;
+    background: #eee;
+    border-radius: .1rem;
+    padding: 3% 0;
+    font-size: .24rem;
+    color: #434343;
+}
+#address{
+   float: left;
+    width: 82%;
+    border: 1px solid #7d7d7d;
+    background: #eee;
+    border-radius: .1rem;
+    padding: 3% 0;
+    text-indent: .25rem;
+    font-size: .24rem;
+    color: #434343; 
+    resize: none;
+}
+.form_btn {
+    width: 53%;
+    margin: auto;
+    background: #0ed0c5;
+    color: #fff;
+    font-size: .3rem;
+    text-align: center;
+    padding: 3% 0%;
+    margin-top: 5%;
+    border-radius: .2rem;
+    letter-spacing: .03rem;
+}
